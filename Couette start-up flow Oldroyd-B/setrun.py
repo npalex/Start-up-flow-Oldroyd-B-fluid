@@ -55,7 +55,6 @@ def setrun(claw_pkg='classic'):
     clawdata.num_dim = num_dim
     
     # Lower and upper edge of computational domain:
-    #clawdata.lower[0] = -1.000000e+00          # xlower
     clawdata.lower[0] = 0.000000e+00            # xlower
     clawdata.upper[0] = 1.000000e+00            # xupper
     
