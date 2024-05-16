@@ -35,4 +35,4 @@ which is the ratio of the viscoelastic relaxation time scale $\lambda$ over the 
     
 Alternatively, in the limit $E >> 1$, viscoelastic relaxation is very slow on the time scale $t_{diff}$ and the fluid behaves as an elastic solid. Here, momentum spreads through the fluid via a shear wave in response to a shear stress at the wall. In this case, the conservation equations are hyperbolic.
 
-For a description of the numerical scheme, see GetData_Oldroyd_B.py
+For a description of the numerical scheme, see GetData_Oldroyd_B.ipynb
