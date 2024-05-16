@@ -54,7 +54,6 @@ SOURCES = \
   bc1.f \
   rp1_maxwell.f90 \
   src1.f90
-#  $(CLAW)/riemann/src/rp1_acoustics.f90
 
 #-------------------------------------------------------------------
 # Include Makefile containing standard definitions and make options:
