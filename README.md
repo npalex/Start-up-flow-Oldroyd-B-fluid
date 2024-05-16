@@ -9,7 +9,7 @@ and
 $$ Wi \frac{\partial \tau_{xy}}{\partial t}=\frac{\partial v_x}{\partial y} \
         - \tau_{xy} + \beta \frac{Wi}{Re} \frac{\partial^2 \tau_{xy}}{\partial y^2}, $$
 
-where the Reynolds $Re$ and Wiessenberg $Wi$ numbers and the viscosity ratio $\beta$ are defined according to
+where the Reynolds $Re$ number, the Wiessenberg $Wi$ number, and the viscosity ratio $\beta$ are defined according to
 
 $$ Re = \frac{\rho U h}{\eta} , $$
 
@@ -19,15 +19,13 @@ and
 
 $$ \beta = \frac{\eta_s}{\eta} .$$
 
-Here $\eta$, $\eta_s$, $\rho$, $U$, $h$, and $\lambda$ are the solution viscosity, solvent visocosity, density, upper plate velocity, gap width, and viscoelastic relaxation time, respectively, and the time scale $\bar t$ of this problem is defined by the characteristic shear rate according to $\bar t = \frac{h}{U}$.
-
-&emsp; The boundary conditions are no flux (stress) and no slip (velocity) at $y = 0$ and $y = 1$ with uniform initial condtions. The numerical scheme employs the Godulov (generalized upwind) method and monontenized centeral flux limiter functions.
+Here $\eta$, $\eta_s$, $\rho$, $U$, $h$, and $\lambda$ are the solution viscosity, solvent visocosity, density, upper plate velocity, gap width, and viscoelastic relaxation time, respectively, and the time scale $\bar t$ of this problem is defined by the characteristic shear rate according to $\bar t = \frac{h}{U}$. The boundary conditions are no flux (stress) and no slip (velocity) at $y = 0$ and $y = 1$ with uniform initial condtions.
 
 &emsp; In order to view the influence of elasticity in this problem, it is useful to define the elasticity number $E$, given by
 
 $$ E = \frac{Wi}{Re} = \frac{\lambda}{t_{diff}} ,$$
     
-which is the ratio of the viscoelastic relaxation time scale $\lambda$ over the momentum diffusion time scale $t_{diff} = \frac{h^2}{\nu}$, where $ \nu = \frac{\eta}{\rho}$ is the kinematic viscosity, also known as the momentum diffusivity. 
+which is the ratio of the viscoelastic relaxation time scale $\lambda$ over the momentum diffusion time scale $t_{diff} = \frac{h^2}{\nu}$, where $\nu = \frac{\eta}{\rho}$ is the kinematic viscosity. 
 
 > In this problem, momentum transfer across the gap occurs via two mechanisms: 1) diffusion and 2) shear wave propagation. The value of $E$ indicates the relative importance of these mechanisms.
     
