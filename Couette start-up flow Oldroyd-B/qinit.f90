@@ -12,7 +12,7 @@ subroutine qinit(meqn,mbc,mx,xlower,dx,q,maux,aux)
     real(kind=8), intent(in) :: aux(maux,1-mbc:mx+mbc)
     real(kind=8), intent(inout) :: q(meqn,1-mbc:mx+mbc)
  
-	q = 0.d0
+    q = 0.d0
 
 end subroutine qinit
 
