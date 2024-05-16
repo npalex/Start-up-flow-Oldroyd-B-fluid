@@ -42,8 +42,8 @@ subroutine rp1(maxm,meqn,mwaves,maux,mbc,mx,ql,qr,auxl,auxr,wave,s,amdq,apdq)
 !     ------------
     dimension delta(2)
 
-	! parameters are defined in setrun.py
-	common /cparam/ cc,zz,beta,E,Ma 
+! parameters are defined in setrun.py
+    common /cparam/ cc,zz,beta,E,Ma 
 
 	! split the jump in q at each interface into waves
 	! find a1 and a2, the coefficients of the 2 eigenvectors:
