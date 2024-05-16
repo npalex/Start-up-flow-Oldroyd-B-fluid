@@ -36,13 +36,13 @@ c-------------------------------------------------------
 c
   100 continue
 c     # user-specified boundary conditions
-c	  # no-slip
-	  q(1,1) = 0.
-c	  # no-flux
-	  q(2,1) = q(2,2)
+c     # no-slip
+      q(1,1) = 0.
+c     # no-flux
+      q(2,1) = q(2,2)
       do ibc=1,mbc
          q(1,1-ibc) = q(1,1)
-		 q(2,1-ibc) = q(2,1)
+         q(2,1-ibc) = q(2,1)
       end do
       go to 199
 c
@@ -85,15 +85,14 @@ c-------------------------------------------------------
 c
   200 continue
 c     # user-specified boundary conditions
-c	  # no-slip
-	  q(1,mx) = 1.
-c	  # no-flux
-	  q(2,mx) = q(2,mx-1)
+c     # no-slip
+      q(1,mx) = 1.
+c     # no-flux
+      q(2,mx) = q(2,mx-1)
       do ibc=1,mbc
          q(1,mx+ibc) = q(1,mx)
-		 q(2,mx+ibc) = q(2,mx)
+         q(2,mx+ibc) = q(2,mx)
       end do
-c      stop
       go to 299
 
   210 continue
