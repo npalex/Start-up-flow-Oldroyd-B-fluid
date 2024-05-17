@@ -31,7 +31,7 @@ which is the ratio of the viscoelastic relaxation time scale $\lambda$ over the 
     
 <font size = 3>**<u> Limits:**<u></font>
 
-&emsp; In the limit $E<<1$, viscoelastic relaxation is very fast on the time scale $t_{diff}$ and elasticity effects are negligible. Here, momentum spreads through the fluid via diffusion in response to an imposed shear stress at the wall and eqn (2) reduces to: $\tau_{xy} = \frac{\partial u}{\partial x}$, corresponding to a Newtonian fluid. In this limit, the conservation equations are parabolic.
+&emsp; In the limit $E<<1$, viscoelastic relaxation is very fast on the time scale $t_{diff}$ and elasticity effects are negligible. Here, momentum spreads through the fluid via diffusion in response to an imposed shear stress at the wall and eqn (2) reduces to: $\tau = \frac{\partial u}{\partial x}$, corresponding to a Newtonian fluid. In this limit, the conservation equations are parabolic.
     
 Alternatively, in the limit $E >> 1$, viscoelastic relaxation is very slow on the time scale $t_{diff}$ and the fluid behaves as an elastic solid. Here, momentum spreads through the fluid via a shear wave in response to a shear stress at the wall. In this case, the conservation equations are hyperbolic.
 
