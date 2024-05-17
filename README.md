@@ -2,12 +2,12 @@
 
 &emsp; This program solves the following system of equations:
 
-$$ Re \frac{\partial u}{\partial t}=\frac{\partial \tau}{\partial y} $$
+$$ Re \frac{\partial u}{\partial t}=\frac{\partial \tau}{\partial x} $$
 
 and
 
-$$ Wi \frac{\partial \tau}{\partial t}=\frac{\partial u}{\partial y} \
-        - \tau + \beta \frac{Wi}{Re} \frac{\partial^2 \tau}{\partial y^2}, $$
+$$ Wi \frac{\partial \tau}{\partial t}=\frac{\partial u}{\partial x} \
+        - \tau + \beta \frac{Wi}{Re} \frac{\partial^2 \tau}{\partial x^2}, $$
 
 where $\tau$ and $u$ are the local shear stress and fluid velocity, respectively. The Reynolds number $Re$ , the Wiessenberg number $Wi$, and the viscosity ratio $\beta$ are defined according to
 
@@ -19,7 +19,7 @@ and
 
 $$ \beta = \frac{\eta_s}{\eta} .$$
 
-Here $\eta$, $\eta_s$, $\rho$, $U$, $h$, and $\lambda$ are the solution viscosity, solvent visocosity, density, upper plate velocity, gap width, and viscoelastic relaxation time, respectively, and the time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{h}{U}$. The boundary conditions are no flux (stress) and no slip (velocity) at $y = 0$ and $y = 1$ with uniform initial condtions.
+Here $\eta$, $\eta_s$, $\rho$, $U$, $h$, and $\lambda$ are the solution viscosity, solvent visocosity, density, upper plate velocity, gap width, and viscoelastic relaxation time, respectively, and the time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{h}{U}$. The boundary conditions are no flux (stress) and no slip (velocity) at $x = 0$ and $x = 1$ with uniform initial condtions.
 
 &emsp; In order to view the influence of elasticity in this problem, it is useful to define the elasticity number $E$, given by
 
@@ -31,7 +31,7 @@ which is the ratio of the viscoelastic relaxation time scale $\lambda$ over the 
     
 <font size = 3>**<u> Limits:**<u></font>
 
-&emsp; In the limit $E<<1$, viscoelastic relaxation is very fast on the time scale $t_{diff}$ and elasticity effects are negligible. Here, momentum spreads through the fluid via diffusion in response to an imposed shear stress at the wall and eqn (2) reduces to: $\tau_{xy} = \frac{\partial v_x}{\partial y}$, corresponding to a Newtonian fluid. In this limit, the conservation equations are parabolic.
+&emsp; In the limit $E<<1$, viscoelastic relaxation is very fast on the time scale $t_{diff}$ and elasticity effects are negligible. Here, momentum spreads through the fluid via diffusion in response to an imposed shear stress at the wall and eqn (2) reduces to: $\tau_{xy} = \frac{\partial u}{\partial x}$, corresponding to a Newtonian fluid. In this limit, the conservation equations are parabolic.
     
 Alternatively, in the limit $E >> 1$, viscoelastic relaxation is very slow on the time scale $t_{diff}$ and the fluid behaves as an elastic solid. Here, momentum spreads through the fluid via a shear wave in response to a shear stress at the wall. In this case, the conservation equations are hyperbolic.
 
