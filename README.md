@@ -1,4 +1,6 @@
-# **Start-up, shear-driven flow of a Oldroyd-B fluid between parallel plates**
+# **Shear-driven start-up flow of an Oldroyd-B fluid between parallel plates**
+
+## **Problem statement**:
 
 &emsp; This program solves the following system of equations:
 
@@ -59,6 +61,8 @@ The convective terms are discretized via the Godunov method and monotenized cent
 
 The numerical result is advanced forward in time via operator splitting according to:
 
+$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}  $$
+
 $$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}} 
                                 + \lambda_2 W_{i+\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
@@ -66,7 +70,7 @@ $$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
 
 and
 
-$$ q^{n+1}_i = q^{*}_i + \Delta t \boldsymbol \psi \left(\boldsymbol q^{*}_i\right), $$
+$$ q^{n+1}_i = q^{*}_i + \Delta t \psi \left(q^{*}_i\right), $$
 
 
 ## **Results**:
