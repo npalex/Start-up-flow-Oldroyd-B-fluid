@@ -41,7 +41,7 @@ For a description of the numerical scheme, see GetData_Oldroyd_B.ipynb
 
 The problem above is a *linear* system of equations of the form:
 
-$$ \frac{\partial q}{\partial t} + A \cdot \frac{\partial q}{\partial x} =  \psi $$ 
+$$ \frac{\partial q}{\partial t} + A \cdot \frac{\partial q}{\partial x} =  \psi, $$ 
 
 where 
 
@@ -49,7 +49,7 @@ $$ q = \begin{bmatrix} u \\\ \tau \end{bmatrix}, $$
 
 $$ A = \begin{bmatrix} 0 & -\frac{1}{Re} 
                                 \\\ -\frac{1}{Wi} & 0 
-                                \end{bmatrix} $$
+                                \end{bmatrix}, $$
                                 
 $$ \psi = \begin{bmatrix} 0
                                 \\\ \frac{1}{Wi} \tau - \beta E \frac{\partial^2 \tau}{\partial x^2} 
@@ -59,9 +59,12 @@ The convective terms are discretized via the Godunov method and flux limiters ar
 
 The numerical result is advanced forward in time via operator splitting according to:
 
-$$e^{-\frac{t}{RC}}$$
-
 $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}\right)$$
+
+$$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
+				+ \lambda_2 W_{i+\frac{1}{2}}
+                                + F_{i-\frac{1}{2}}
+                                + F_{i+\frac{1}{2}}\right) $$
 
 $$q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}\right)$$
 
