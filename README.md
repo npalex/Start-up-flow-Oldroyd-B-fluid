@@ -59,7 +59,7 @@ The convective terms are discretized via the Godunov method and flux limiters ar
 
 The numerical result is advanced forward in time via operator splitting according to:
 
-$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1  W_{\frac{1}{2}} \right)  $$
+$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1  W_{ \frac{1}{2} } \right)  $$
 
 and
 
