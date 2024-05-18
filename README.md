@@ -96,10 +96,31 @@ and
 
 $$ \boldsymbol r_2 = \begin{bmatrix} \sqrt{E} 
                                 \\\ 1 
-                                \end{bmatrix}, $$
+                                \end{bmatrix}. $$
 
-where $E = \frac{Wi}{Re}$ is the elasticity number.
+The eigenmode wave amplitudes are
 
+$$ \alpha_{1, i-\frac{1}{2}} = w_{1,i} - w_{1,i-1} $$
+
+and
+
+$$ \alpha_{2, i+\frac{1}{2}} = w_{2,i+1} - w_{2,i} $$
+
+and the eigenmodes are
+
+$$ w^n_{1,i} = \frac{1}{2\sqrt{E}}\left(\sqrt{E}q^n_{2,i}-q^n_{1,i}\right) $$
+
+and
+
+$$ w^n_{2,i} = \frac{1}{2\sqrt{E}}\left(q^n_{1,i}+\sqrt{E}q^n_{2,i}\right) $$
+
+Finally, flux $ F_{i-\frac{1}{2}}$ is defined via:
+
+$$ F_{i-\frac{1}{2}} = \frac{1}{2} \sum_{p=1}^{2}\left|\lambda_p\right| \left(1-\frac{\Delta t}{\Delta x}\left|\lambda_p\right| \right) \alpha_{p, i-\frac{1}{2}} \phi(\theta_{p,i-\frac{1}{2}})$$
+
+where
+
+$$ \theta_{p,i-\frac{1}{2}} = \frac{\alpha_{p, I-\frac{1}{2}}}{\alpha_{p, i-\frac{1}{2}}}, $$
 
 ## **Results**:
 
