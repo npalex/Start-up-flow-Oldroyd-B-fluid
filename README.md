@@ -50,9 +50,6 @@ $E = 1$, $Ma = 0.5$, and $\beta = 0$
 https://github.com/npalex/Start-up-flow-Oldroyd-B-fluid/assets/169947150/01d4359d-dd2a-4115-a78c-ea67d4e46edb
 
 **References**:
-@misc{clawpack,
-      title={Clawpack software}, 
-      author={Clawpack Development Team}, 
-      url={http://www.clawpack.org}, 
-      note={Version 5.9.2},
-      year={2023}}
+
+Clawpack Development Team (2023), Clawpack Version 5.9.2,
+    http://www.clawpack.org, doi: 10.5281/zenodo.10076317
