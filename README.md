@@ -61,7 +61,7 @@ The numerical result is advanced forward in time via operator splitting accordin
 
 $$e^{-\frac{t}{RC}}$$
 
-$$q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}\right)$$
+$$q^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}\right)$$
 
 $$q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}\right)$$
 
