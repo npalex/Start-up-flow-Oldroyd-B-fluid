@@ -1,4 +1,4 @@
-##**Start-up, shear-driven flow of a Oldroyd-B fluid between parallel plates**
+## **Start-up, shear-driven flow of a Oldroyd-B fluid between parallel plates**
 
 &emsp; This program solves the following system of equations:
 
@@ -37,7 +37,7 @@ Alternatively, in the limit $E >> 1$, viscoelastic relaxation is very slow on th
 
 For a description of the numerical scheme, see GetData_Oldroyd_B.ipynb
 
-##**<u> Numerical Scheme:**<u>
+## **Numerical Scheme:**
 
 The problem above is a *linear* system of hyperbolic equations of the form:
 
