@@ -37,7 +37,7 @@ Alternatively, in the limit $E >> 1$, viscoelastic relaxation is very slow on th
 
 ## **Numerical Scheme:**
 
-The problem above is a *linear* system of equations of the form:
+The problem described above is a *linear* system of equations of the form:
 
 $$ \frac{\partial q}{\partial t} + A \cdot \frac{\partial q}{\partial x} =  \psi, $$ 
 
@@ -53,26 +53,28 @@ $$ \psi = \begin{bmatrix} 0
                                 \\\ \frac{1}{Wi} \tau - \beta E \frac{\partial^2 \tau}{\partial x^2} 
                                 \end{bmatrix}. $$
 
-Operator splitting is used to advance the solution forward in time. The convective terms are discretized via the Godunov method and flux limiters are used to achieve second order accuracy where the solution is smooth.
+A fractional step approach is used to provide a numerical result. The convective terms are discretized via the Godunov method
 
 $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
 				+ \lambda_2 W_{i+\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
                                 + F_{i+\frac{1}{2}}\right) $$
 
-and the diffusive source term is evaluated using the Crank-Nicolson method.
+and flux limiters are used to evaluate the correction fluxes $F_{i+\frac{1}{2}}$ and $F_{i-\frac{1}{2}$ to achieve second order accuracy where the solution is smooth.
 
-$$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right), $$
+$q$ is then updated by the diffusive source term using the Crank-Nicolson method.
 
-The waves are given by 
+$$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right). $$
+
+Here, the waves are given by 
 
 $$ W_{i-\frac{1}{2}} = \alpha_{1,i-\frac{1}{2}} r_1$$
 
 and
 
-$$ W_{i+\frac{1}{2}} = \alpha_{2,i+\frac{1}{2}} r_2$$ 
+$$ W_{i+\frac{1}{2}} = \alpha_{2,i+\frac{1}{2}} r_2,$$ 
 
-the eigenvalues  are
+the eigenvalues of matrix $A$ are
 
 $$\lambda_1  = \frac{1}{Ma}$$
 
@@ -80,9 +82,9 @@ and
 
 $$\lambda_2 = -\frac{1}{Ma},$$
 
-where the viscoelastic Mach number is $Ma = \sqrt{Re Wi} = \frac{U}{c}$  and $c = \sqrt{\frac{\nu}{\lambda}}$ is the shear wave propagation speed.
+where the viscoelastic Mach number is $Ma = \sqrt{Re Wi} = \frac{U}{c}$ and $c = \sqrt{\frac{\nu}{\lambda}}$ is the shear wave propagation speed,
 
-The eigenvectors of matrix $A$ are
+and the eigenvectors of matrix $A$ are
 
 $$ \boldsymbol r_1 = \begin{bmatrix} -\sqrt{E}
                                 \\\ 1 
@@ -110,7 +112,7 @@ and
 
 $$ w^n_{2,i} = \frac{1}{2\sqrt{E}}\left(q^n_{1,i}+\sqrt{E}q^n_{2,i}\right) $$
 
-Finally, the second order correction flux $F_{i-\frac{1}{2}}$ is defined via:
+Finally, the second-order correction flux $F_{i-\frac{1}{2}}$ is defined via:
 
 $$ F_{i-\frac{1}{2}} = \frac{1}{2} \sum_{p=1}^{2}\left|\lambda_p\right| \left(1-\frac{\Delta t}{\Delta x}\left|\lambda_p\right| \right) \alpha_{p, i-\frac{1}{2}} \phi(\theta_{p,i-\frac{1}{2}})$$
 
@@ -126,7 +128,7 @@ and the monotenized central flux limiter function is defined according to
 
 $$ \phi(\theta) = max\left(0, min\left(\frac{(1+\theta)}{2},2,2\theta \right)\right). $$
                                 
-Note, the CFL condition for numerical stability requires:
+Note, the CFL condition for numerical stability for the convective portion of this problem requires:
 
 $$ \frac{\Delta t}{\Delta x Ma} \leq 1 .$$
 
