@@ -35,8 +35,6 @@ which is the ratio of the viscoelastic relaxation time scale $\lambda$ over the 
     
 Alternatively, in the limit $E >> 1$, viscoelastic relaxation is very slow on the time scale $t_{diff}$ and the fluid behaves as an elastic solid. Here, momentum spreads through the fluid via a shear wave in response to a shear stress at the wall. In this case, the conservation equations are hyperbolic.
 
-For a description of the numerical scheme, see GetData_Oldroyd_B.ipynb
-
 ## **Numerical Scheme:**
 
 The problem above is a *linear* system of equations of the form:
@@ -55,16 +53,14 @@ $$ \psi = \begin{bmatrix} 0
                                 \\\ \frac{1}{Wi} \tau - \beta E \frac{\partial^2 \tau}{\partial x^2} 
                                 \end{bmatrix}. $$
 
-The convective terms are discretized via the Godunov method and flux limiters are used to achieve second order accuracy where the solution is smooth. The diffusive source term is evaluated using the Crank-Nicolson method.
-
-The numerical result is advanced forward in time via operator splitting according to:
+Operator splitting is used to advance the solution forward in time. The convective terms are discretized via the Godunov method and flux limiters are used to achieve second order accuracy where the solution is smooth.
 
 $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
 				+ \lambda_2 W_{i+\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
                                 + F_{i+\frac{1}{2}}\right) $$
 
-and
+and the diffusive source term is evaluated using the Crank-Nicolson method.
 
 $$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right), $$
 
@@ -126,7 +122,7 @@ $$ I = \left\{ \begin{matrix} i-1, & \lambda_p > 0
                                 \\\  i+1, &\lambda_p < 0  
                                 \end{matrix} \right. ,$$
                                 
-and the flux limiter function is defined according to
+and the monotenized central flux limiter function is defined according to
 
 $$ \phi(\theta) = max\left(0, min\left(\frac{(1+\theta)}{2},2,2\theta \right)\right). $$
                                 
