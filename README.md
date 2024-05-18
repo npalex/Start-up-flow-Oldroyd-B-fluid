@@ -47,6 +47,24 @@ where
 
 $$ q = \begin{bmatrix} u \\\ \tau \end{bmatrix}, $$
 
+$$ \boldsymbol A = \begin{bmatrix} 0 & -\frac{1}{Re} 
+                                \\\ -\frac{1}{Wi} & 0 
+                                \end{bmatrix} $$
+                                
+$$ \boldsymbol \psi = \begin{bmatrix} 0
+                                \\\ \frac{1}{Wi} \tau - \beta E \frac{\partial^2 \tau}{\partial x^2} 
+                                \end{bmatrix}. $$
+                                trix}. $$
+
+The system of equations is discretized via the Godunov method (generalized upwind), fractional splitting to handle the source term, and monotenized central flux limiter functions to achieve second order accuracy where the solution is smooth.
+
+The equations used to advance the solution forward in time by one time step are given by:
+$$ \boldsymbol q^{*}_i = \boldsymbol q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 \boldsymbol W_{i-\frac{1}{2}} 
+                                + \lambda_2 \boldsymbol W_{i+\frac{1}{2}}
+                                + \boldsymbol F_{i-\frac{1}{2}}
+                                + \boldsymbol F_{i+\frac{1}{2}}\right) $$
+
+
 **Results**:
 
 Velocity and shear stress profiles with  
