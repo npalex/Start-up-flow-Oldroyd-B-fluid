@@ -114,7 +114,7 @@ and
 
 $$ w^n_{2,i} = \frac{1}{2\sqrt{E}}\left(q^n_{1,i}+\sqrt{E}q^n_{2,i}\right) $$
 
-Finally, flux $ F_{i-\frac{1}{2}}$ is defined via:
+Finally, the second order correction flux $F_{i-\frac{1}{2}}$ is defined via:
 
 $$ F_{i-\frac{1}{2}} = \frac{1}{2} \sum_{p=1}^{2}\left|\lambda_p\right| \left(1-\frac{\Delta t}{\Delta x}\left|\lambda_p\right| \right) \alpha_{p, i-\frac{1}{2}} \phi(\theta_{p,i-\frac{1}{2}})$$
 
