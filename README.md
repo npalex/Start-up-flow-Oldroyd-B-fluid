@@ -40,9 +40,11 @@ For a description of the numerical scheme, see GetData_Oldroyd_B.ipynb
 <font size = 3>**<u> Numerical Scheme:**<u></font>
 
 The problem above is a *linear* system of hyperbolic equations of the form:
-$$ \frac{\partial \boldsymbol q}{\partial t} + \boldsymbol A \cdot \frac{\partial \boldsymbol q}{\partial x} =  \boldsymbol\psi $$ 
+
+$$ \frac{\partial q}{\partial t} + A \cdot \frac{\partial q}{\partial x} =  \psi $$ 
+
 where 
-$$ \boldsymbol q = \begin{bmatrix} u 
+$$ q = \begin{bmatrix} u 
                                 \\\ \tau 
                                 \end{bmatrix}, $$
 
