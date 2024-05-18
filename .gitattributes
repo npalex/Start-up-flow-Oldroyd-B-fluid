@@ -1,5 +1,9 @@
 *.f90 linguist-language=Fortran
 *.f linguist-language=Fortran
-*.f linguist-language=Fortran
 *.py linguist-language=Python
 *Makefile linguist-language=Makefile
+
+*.f90 linguist-detectable=true
+*.f linguist-detectable=true
+*.py linguist-detectable=true
+*Makefile linguist-detectable=true
