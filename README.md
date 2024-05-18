@@ -86,7 +86,7 @@ $$\lambda_2 = -\frac{1}{Ma},$$
 
 where the viscoelastic Mach number is $Ma = \sqrt{Re Wi} = \frac{U}{c}$  and $c = \sqrt{\frac{\nu}{\lambda}}$ is the shear wave propagation speed.
 
-The eigenvectors are
+The eigenvectors of matrix $A$ are
 
 $$ \boldsymbol r_1 = \begin{bmatrix} -\sqrt{E}
                                 \\\ 1 
@@ -121,6 +121,18 @@ $$ F_{i-\frac{1}{2}} = \frac{1}{2} \sum_{p=1}^{2}\left|\lambda_p\right| \left(1-
 where
 
 $$ \theta_{p,i-\frac{1}{2}} = \frac{\alpha_{p, I-\frac{1}{2}}}{\alpha_{p, i-\frac{1}{2}}}, $$
+
+$$ I = \left\{ \begin{matrix} i-1, & \lambda_p > 0 
+                                \\\  i+1, &\lambda_p < 0  
+                                \end{matrix} \right. ,$$
+                                
+and the flux limiter function is defined according to
+
+$$ \phi(\theta) = max\left(0, min\left(\frac{(1+\theta)}{2},2,2\theta \right)\right). $$
+                                
+Note, the CFL condition for numerical stability requires:
+
+$$ \frac{\Delta t}{\Delta x Ma} \leq 1 .$$
 
 ## **Results**:
 
