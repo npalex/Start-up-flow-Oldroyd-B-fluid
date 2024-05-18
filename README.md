@@ -62,8 +62,6 @@ $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
                                 + F_{i+\frac{1}{2}}\right) $$
 
-and flux limiters are used to evaluate the correction fluxes $F_{i+\frac{1}{2}}$ and $F_{i-\frac{1}{2}}$ to achieve second order accuracy where the solution is smooth.
-
 $q$ is then updated for diffusion using the Crank-Nicolson method.
 
 $$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right). $$
@@ -130,7 +128,7 @@ and the monotenized central flux limiter function is defined according to
 
 $$ \phi(\theta) = max\left(0, min\left(\frac{(1+\theta)}{2},2,2\theta \right)\right). $$
                                 
-Note, the CFL condition for numerical stability for the convective portion of this problem requires:
+The final result is second order accurate where the solution is smooth and the CFL condition for numerical stability for the convective portion of this problem requires:
 
 $$ \frac{\Delta t}{\Delta x Ma} \leq 1 .$$
 
