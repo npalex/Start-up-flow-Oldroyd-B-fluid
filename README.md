@@ -41,7 +41,7 @@ For a description of the numerical scheme, see GetData_Oldroyd_B.ipynb
 
 ## **Numerical Scheme:**
 
-The problem above is a *linear* system of hyperbolic equations of the form:
+The problem above is a *linear* system of equations of the form:
 
 $$ \frac{\partial q}{\partial t} + A \cdot \frac{\partial q}{\partial x} =  \psi $$ 
 
@@ -57,11 +57,11 @@ $$ \psi = \begin{bmatrix} 0
                                 \\\ \frac{1}{Wi} \tau - \beta E \frac{\partial^2 \tau}{\partial x^2} 
                                 \end{bmatrix}. $$
 
-The convective terms are discretized via the Godunov method and monotenized central flux limiter functions are used to achieve second order accuracy where the solution is smooth. The source term is evaluated using the Crank-Nicolson method.
+The convective terms are discretized via the Godunov method and flux limiters are used to achieve second order accuracy where the solution is smooth. The source term is evaluated using the Crank-Nicolson method.
 
 The numerical result is advanced forward in time via operator splitting according to:
 
-$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} (\lambda_1 W_{diff})  $$
+$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} /left(\lambda_1 /right)  $$
 
 and
 
