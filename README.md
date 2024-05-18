@@ -1,7 +1,5 @@
 # **Shear-driven start-up flow of an Oldroyd-B fluid between parallel plates**
 
-## **Problem statement**:
-
 &emsp; This program solves the following system of equations:
 
 $$ Re \frac{\partial u}{\partial t}=\frac{\partial \tau}{\partial x} $$
@@ -61,7 +59,7 @@ The convective terms are discretized via the Godunov method and flux limiters ar
 
 The numerical result is advanced forward in time via operator splitting according to:
 
-$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} /left(\lambda_1 /right)  $$
+$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 \right)  $$
 
 and
 
