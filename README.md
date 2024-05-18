@@ -62,7 +62,7 @@ $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
                                 + F_{i+\frac{1}{2}}\right). $$
 
-$q$ is then updated for diffusion using the Crank-Nicolson method:
+$q$ is then updated for diffusion using the Crank-Nicolson method via
 
 $$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right). $$
 
