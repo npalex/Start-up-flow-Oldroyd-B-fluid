@@ -89,13 +89,13 @@ where the viscoelastic Mach number is $Ma = \sqrt{Re Wi} = \frac{U}{c}$  and $c 
 The eigenvectors are
 
 $$ \boldsymbol r_1 = \begin{bmatrix} -\sqrt{E}
-                                \\ 1 
+                                \\\ 1 
                                 \end{bmatrix}, $$
                                 
 and
 
 $$ \boldsymbol r_2 = \begin{bmatrix} \sqrt{E} 
-                                \\ 1 
+                                \\\ 1 
                                 \end{bmatrix}, $$
 
 where $E = \frac{Wi}{Re}$ is the elasticity number.
