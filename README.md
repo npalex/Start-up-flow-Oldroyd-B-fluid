@@ -55,14 +55,14 @@ $$ \psi = \begin{bmatrix} 0
                                 \\\ \frac{1}{Wi} \tau - \beta E \frac{\partial^2 \tau}{\partial x^2} 
                                 \end{bmatrix}. $$
 
-A fractional step approach is used provide a numerical result. The convective terms are discretized via the Godunov method
+A fractional step approach is used provide a numerical result. The convective terms are discretized via the Godunov method and the solution is updated for convection according to
 
 $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
 				+ \lambda_2 W_{i+\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
-                                + F_{i+\frac{1}{2}}\right) $$
+                                + F_{i+\frac{1}{2}}\right). $$
 
-$q$ is then updated for diffusion using the Crank-Nicolson method.
+$q$ is then updated for diffusion using the Crank-Nicolson method:
 
 $$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right). $$
 
