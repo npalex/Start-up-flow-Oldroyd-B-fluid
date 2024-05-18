@@ -1,4 +1,4 @@
-## **Start-up, shear-driven flow of a Oldroyd-B fluid between parallel plates**
+### **Start-up, shear-driven flow of a Oldroyd-B fluid between parallel plates**
 
 &emsp; This program solves the following system of equations:
 
@@ -56,17 +56,21 @@ $$ \psi = \begin{bmatrix} 0
                                 \end{bmatrix}. $$
                                 trix}. $$
 
-The convective terms are discretized via the Godunov method and monotenized central flux limiter functions are used to achieve second order accuracy where the solution is smooth. 
+The convective terms are discretized via the Godunov method and monotenized central flux limiter functions are used to achieve second order accuracy where the solution is smooth. The source term is evaluated using the Crank-Nicolson method.
 
-The equations used to advance the solution forward in time by one time step are given by:
+The numerical result is advanced forward in time via operator splitting according to:
 
 $$ q^{*}_i = \boldsymbol q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}} 
                                 + \lambda_2 W_{i+\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
                                 + F_{i+\frac{1}{2}}\right) $$
 
+and
 
-**Results**:
+$$ \boldsymbol q^{n+1}_i = q^{*}_i + \Delta t \boldsymbol \psi \left(\boldsymbol q^{*}_i\right), $$
+
+
+## **Results**:
 
 Velocity and shear stress profiles with  
 $E = 1$, $Ma = 0.5$, and $\beta = 0.1$
