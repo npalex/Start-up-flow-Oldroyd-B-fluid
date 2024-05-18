@@ -48,21 +48,23 @@ $$ q = \begin{bmatrix} u \\\ \tau \end{bmatrix}, $$
 $$ A = \begin{bmatrix} 0 & -\frac{1}{Re} 
                                 \\\ -\frac{1}{Wi} & 0 
                                 \end{bmatrix}, $$
+
+and
                                 
 $$ \psi = \begin{bmatrix} 0
                                 \\\ \frac{1}{Wi} \tau - \beta E \frac{\partial^2 \tau}{\partial x^2} 
                                 \end{bmatrix}. $$
 
-A fractional step approach is used to provide a numerical result. The convective terms are discretized via the Godunov method
+A fractional step approach is used provide a numerical result. The convective terms are discretized via the Godunov method
 
 $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
 				+ \lambda_2 W_{i+\frac{1}{2}}
                                 + F_{i-\frac{1}{2}}
                                 + F_{i+\frac{1}{2}}\right) $$
 
-and flux limiters are used to evaluate the correction fluxes $F_{i+\frac{1}{2}}$ and $F_{i-\frac{1}{2}$ to achieve second order accuracy where the solution is smooth.
+and flux limiters are used to evaluate the correction fluxes $F_{i+\frac{1}{2}}$ and $F_{i-\frac{1}{2}}$ to achieve second order accuracy where the solution is smooth.
 
-$q$ is then updated by the diffusive source term using the Crank-Nicolson method.
+$q$ is then updated for diffusion using the Crank-Nicolson method.
 
 $$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right). $$
 
