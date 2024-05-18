@@ -53,3 +53,9 @@ https://github.com/npalex/Start-up-flow-Oldroyd-B-fluid/assets/169947150/01d4359
 
 Clawpack Development Team (2023), Clawpack Version 5.9.2,
     http://www.clawpack.org, doi: 10.5281/zenodo.10076317
+
+R. J. LeVeque, 1997. Wave propagation algorithms for multi-dimensional 
+    hyperbolic systems. J. Comput. Phys. 131, 327–353.
+
+R. J. LeVeque. Finite Volume Methods for Hyperbolic Problems. Cambridge 
+    University Press, Cambridge, UK, 2002.
