@@ -82,9 +82,7 @@ and
 
 $$\lambda_2 = -\frac{1}{Ma},$$
 
-where the viscoelastic Mach number is $Ma = \sqrt{Re Wi} = \frac{U}{c}$ and $c = \sqrt{\frac{\nu}{\lambda}}$ is the shear wave propagation speed,
-
-and the eigenvectors of matrix $A$ are
+where the viscoelastic Mach number is defined by $Ma = \sqrt{Re Wi} = \frac{U}{c}$ and $c = \sqrt{\frac{\nu}{\lambda}}$ is the shear wave propagation speed. The eigenvectors of matrix $A$ are
 
 $$ \boldsymbol r_1 = \begin{bmatrix} -\sqrt{E}
                                 \\\ 1 
