@@ -61,7 +61,7 @@ The convective terms are discretized via the Godunov method and monotenized cent
 
 The numerical result is advanced forward in time via operator splitting according to:
 
-$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} (\lambda_1) \mathbf{W}_{i-1/2}  $$
+$$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} (\lambda_1) W_{i}_{-}_{1/2}  $$
 
 $$ q^{*}_i = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}} 
                                 + \lambda_2 W_{i+\frac{1}{2}}
