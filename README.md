@@ -44,6 +44,7 @@ The problem above is a *linear* system of hyperbolic equations of the form:
 $$ \frac{\partial q}{\partial t} + A \cdot \frac{\partial q}{\partial x} =  \psi $$ 
 
 where 
+
 $$ q = \begin{bmatrix} u \\\ \tau \end{bmatrix}, $$
 
 **Results**:
