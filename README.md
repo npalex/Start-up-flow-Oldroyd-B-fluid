@@ -66,7 +66,26 @@ $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
 
 and
 
-$$ q^{n+1}_i = q_i^* + \Delta t \psi \left(q_i^*\right), $$
+$$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right), $$
+
+The waves are given by 
+
+$$ W_{i-\frac{1}{2}} = \alpha_{1,i-\frac{1}{2}} r_1$$
+
+and
+
+$$ W_{i+\frac{1}{2}} = \alpha_{2,i+\frac{1}{2}} r_2$$ 
+
+the eigenvalues  are
+
+$$\lambda_1  = \frac{1}{Ma}$$
+
+and
+
+$$\lambda_2 = -\frac{1}{Ma},$$
+
+where the viscoelastic Mach number is $Ma = \sqrt{Re Wi} = \frac{U}{c}$  and $c = \sqrt{\frac{\nu}{\lambda}}$ is the shear wave propagation speed.
+
 
 
 ## **Results**:
