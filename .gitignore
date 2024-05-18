@@ -11,6 +11,7 @@ _plots
 *.data
 *.pyc
 .plots
+*.html
 
 # log files
 *.log
@@ -20,6 +21,3 @@ __pycache__
 
 # ipython
 .ipynb_checkpoints
-
-# results
-.html
