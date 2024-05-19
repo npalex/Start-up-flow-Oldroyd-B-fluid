@@ -19,7 +19,7 @@ and
 
 $$ \beta = \frac{\eta_s}{\eta} .$$
 
-Here $\eta$, $\eta_s$, $\rho$, $U$, $h$, and $\lambda$ are the solution viscosity, solvent visocosity, density, upper plate velocity, gap width, and viscoelastic relaxation time, respectively, and the time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{h}{U}$. The boundary conditions are no flux (stress) and no slip (velocity) at $x = 0$ and $x = 1$ with uniform initial condtions corresponding to a fluid a rest.
+Here $\eta$, $\eta_s$, $\rho$, $U$, $h$, and $\lambda$ are the solution viscosity, solvent visocosity, density, upper plate velocity, gap width, and viscoelastic relaxation time, respectively, and the time scale $\bar t$ for this problem is defined by the characteristic shear rate according to $\bar t = \frac{h}{U}$. The boundary conditions are no flux (stress) $/frac{\partial \tau}{\partial x}|_{x=0} = 0$ and no slip (velocity) at $x = 0$ and $x = 1$ with uniform initial condtions corresponding to a fluid a rest.
 
 &emsp; In order to view the influence of elasticity in this problem, it is useful to define the elasticity number $E$, given by
 
@@ -64,7 +64,7 @@ $$q_i^* = q^n_i - \frac{\Delta t}{\Delta x} \left(\lambda_1 W_{i-\frac{1}{2}}
 
 $q$ is then updated for diffusion using the Crank-Nicolson method via
 
-$$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*\right). $$
+$$ q_i^{n+1} = q_i^* + \Delta t \psi \left(q_i^*,q_i^{n+1}\right). $$
 
 Here, the waves are given by 
 
