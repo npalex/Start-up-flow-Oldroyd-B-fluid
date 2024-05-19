@@ -1,10 +1,10 @@
 # **Shear-driven start-up flow of an Oldroyd-B fluid between parallel plates**
 
-&emsp; This program solves the following system of equations:
+&emsp; This program solves conservation of linear momentum
 
 $$ Re \frac{\partial u}{\partial t}=\frac{\partial \tau}{\partial x} $$
 
-and
+and the Oldroyd-B constitutive model
 
 $$ Wi \frac{\partial \tau}{\partial t}=\frac{\partial u}{\partial x} \
         - \tau + \beta \frac{Wi}{Re} \frac{\partial^2 \tau}{\partial x^2}, $$
@@ -37,7 +37,7 @@ Alternatively, in the limit $E >> 1$, viscoelastic relaxation is very slow on th
 
 ## **Numerical Scheme:**
 
-The problem described above is a *linear* system of equations of the form:
+The problem described above is a coupled *linear* system of equations of the form:
 
 $$ \frac{\partial q}{\partial t} + A \cdot \frac{\partial q}{\partial x} =  \psi, $$ 
 
