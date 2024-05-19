@@ -1,3 +1,4 @@
+
 subroutine qinit(meqn,mbc,mx,xlower,dx,q,maux,aux)
 
     ! Set initial conditions for the q array.
