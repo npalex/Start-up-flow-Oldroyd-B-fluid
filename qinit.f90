@@ -1,9 +1,6 @@
 subroutine qinit(meqn,mbc,mx,xlower,dx,q,maux,aux)
 
     ! Set initial conditions for the q array.
-    ! This default version prints an error message since it should
-    ! not be used directly.  Copy this to an application directory and
-    ! loop over all grid cells to set values of q(1:meqn, 1:mx).
 
     implicit none
     
