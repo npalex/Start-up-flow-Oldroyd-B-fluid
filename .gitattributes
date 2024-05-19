@@ -7,3 +7,5 @@
 *.f linguist-detectable=true
 *.py linguist-detectable=true
 *Makefile linguist-detectable=true
+
+*.f90 linguist-vendored=false
