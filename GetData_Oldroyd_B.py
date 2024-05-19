@@ -2,7 +2,7 @@
 #
 # created by: Nathan Alexander (March 2024)
 #
-# The purpose of this program is to extract numerical data for visualization
+# The purpose of this program is to extract and then animate numerical data
 #
 #***************************************************************************
      
@@ -13,7 +13,6 @@ from matplotlib import animation
 from IPython.display import HTML
 
 #-- extract constants from fort.q000
-#f = np.genfromtxt("fort.q0000", usecols=np.arange(0,1))
 f = np.genfromtxt(r'/home/npalex/Start-up-flow-Oldroyd-B-fluid/_output/fort.q0000', usecols=np.arange(0,1))
 
 #-- define constants
@@ -47,23 +46,13 @@ for k in range(0, meqn):
             f = np.genfromtxt(r'/home/npalex/Start-up-flow-Oldroyd-B-fluid/_output/fort.q0' + str(i), usecols=np.arange(k,k+1))
         q[k, i, :] = f[5:]
 
-#-- define array of cell centers
-x = np.arange(xlow + dx/2, 1-dx/2 + dx, dx)
-
-
-#*************************************************************************** 
-#
-# created by: Nathan Alexander (March 2024)
-#
-# The purpose of this program is to plot/animate the results for start-
-#    up flow of an Oldroyd-B fluid between parallel plates
-#
-#***************************************************************************
-
 #------------------------------------------------
 #-- plot results as an animation using matplotlib
 #------------------------------------------------
 mult = 1
+#-- define array of cell centers
+x = np.arange(xlow + dx/2, 1-dx/2 + dx, dx)
+
 fig = plt.figure(figsize=(6,6))
 ax = plt.axes(xlim=(-0.02, 1.02), ylim=(-0.02, 1.1))            # creates axes at specifed limits, (gca() not required)
 
@@ -93,7 +82,6 @@ ax.set_xlabel('$x$', fontsize = 16)
 anim = animation.FuncAnimation(fig = fig, func = fplot, frames=int(steps/mult), interval=30, repeat=False)
 plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
-#HTML(anim.to_html5_video(embed_limit=None)) #-- create mp4 video
 
 with open("Results.html", "w") as f:
-    print(anim.to_html5_video(), file=f)
+    print(anim.to_html5_video(embed_limit=None), file=f)  #-- create html document with animation
