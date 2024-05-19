@@ -83,5 +83,6 @@ anim = animation.FuncAnimation(fig = fig, func = fplot, frames=int(steps/mult), 
 plt.close()                        #-- removes residual plot at final time
 #HTML(anim.to_jshtml())             #-- print animation in jupyter notebook
 
+#-- save animation as an html file
 with open("Results.html", "w") as f:
-    print(anim.to_html5_video(embed_limit=None), file=f)  #-- create html document with animation
+    print(anim.to_html5_video(embed_limit=None), file=f)
